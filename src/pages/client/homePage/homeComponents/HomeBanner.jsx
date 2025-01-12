@@ -9,6 +9,7 @@ const HomeBanner = () => {
           <p className="text-white absolute z-10 top-[25%] lg:left-10 left-4 text-2xl lg:text-6xl font-bold w-8/12">
             Fresh & Healthy
             Organic Food
+            Ashikur
           </p>
         </div>
         <div className="hidden lg:flex flex-col justify-around">
