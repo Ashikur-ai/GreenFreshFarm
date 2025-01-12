@@ -13,7 +13,7 @@ const MainNavbar = () => {
             <div className="">
               <img src="https://res.cloudinary.com/deifi77os/image/upload/v1736661929/GreenFrams/Public/ympwetlspx7lk3dkyu5g.png" alt="" />
             </div>
-            <p className="text-2xl font-semibold">GreenFarms</p>
+            <p className="text-2xl font-semibold">GreenFreshFarm</p>
           </div>
 
           <div className="lg:flex hidden">
