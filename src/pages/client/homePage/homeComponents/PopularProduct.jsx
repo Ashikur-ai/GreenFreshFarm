@@ -2,11 +2,10 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { IoBagOutline } from 'react-icons/io5';
 import ReactStars from "react-rating-stars-component";
-import flayer1 from '@/assets/images/flayer1.png';
-import flayer2 from '@/assets/images/flayer2.png';
-import flayer3 from '@/assets/images/flayer3.png';
+
 import Buttons from '../../../../components/common/Buttons';
 import CountdownTimer from '../../../../components/common/CountdownTimer';
+import counterArray from '../../../../lib/data/CounterSectionData';
 
 const PopularProduct = () => {
 
@@ -133,47 +132,24 @@ const PopularProduct = () => {
         </div>
 
         <div className="flex md:flex-row flex-col my-20 justify-between gap-4">
-          <div className="">
-            <div className="">
-              <img src={flayer1} alt="" />
-            </div>
-            <div className="-mt-96 text-white flex flex-col items-center space-y-3">
-              <p className="font-bold uppercase">best deals</p>
-              <p className="md:text-xl font-semibold">Sale of the Month</p>
-              <div className="">
-                <CountdownTimer targetDate="2025-03-01T00:00:00" />
-              </div>
-              <Buttons />
-            </div>
-          </div>
+          {
+            counterArray?.map(item =>
+              <div className="relative">
+                <div className="">
+                  <img src={item?.image} alt="" />
+                </div>
+                <div className="absolute top-20  xl:left-14 text-white flex flex-col items-center space-y-3">
+                  <p className="font-bold uppercase">best deals</p>
+                  <p className="md:text-xl font-semibold">Sale of the Month</p>
+                  <div className="">
+                    <CountdownTimer targetDate={item?.targetDate} />
+                  </div>
+                  <Buttons />
+                </div>
+              </div>)
+          }
 
-          <div className="">
-            <div className="">
-              <img src={flayer2} alt="" />
-            </div>
-            <div className="-mt-96 text-white flex flex-col items-center space-y-3">
-              <p className="font-bold uppercase">best deals</p>
-              <p className="md:text-xl font-semibold">Sale of the Month</p>
-              <div className="">
-                <CountdownTimer targetDate="2025-03-01T00:00:00" />
-              </div>
-              <Buttons />
-            </div>
-          </div>
 
-          <div className="relative">
-            <div className="">
-              <img src={flayer3} alt="" />
-            </div>
-            <div className="md:-mt-72 lg:-mt-96 text-white flex flex-col items-center space-y-3">
-              <p className="font-bold uppercase">best deals</p>
-              <p className="md:text-xl font-semibold">Sale of the Month</p>
-              <div className="">
-                <CountdownTimer targetDate="2025-03-01T00:00:00" />
-              </div>
-              <Buttons />
-            </div>
-          </div>
         </div>
 
       </div>
