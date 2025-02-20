@@ -138,7 +138,7 @@ const PopularProduct = () => {
                 <div className="">
                   <img src={item?.image} alt="" />
                 </div>
-                <div className="absolute top-20  xl:left-14 text-white flex flex-col items-center space-y-3">
+                <div className="absolute top-20 left-14 lg:left-0   xl:left-14 text-white flex flex-col items-center space-y-3">
                   <p className="font-bold uppercase">best deals</p>
                   <p className="md:text-xl font-semibold">Sale of the Month</p>
                   <div className="">
