@@ -1,18 +1,35 @@
 import React from 'react';
+import saleImg from '@/assets/images/banner.png';
+import { Button } from 'flowbite-react';
+import Buttons from '../../../../components/common/Buttons';
 import HotDealData from '../../../../lib/data/HotDealData';
-import { FaArrowRight } from 'react-icons/fa';
 import ReactStars from "react-rating-stars-component";
 import { IoBagOutline } from 'react-icons/io5';
+import { FaArrowRight } from 'react-icons/fa';
 
-const HotDeals = () => {
+
+const SaleSection = () => {
   return (
-    <div>
-      <div className='w-11/12 lg:w-10/12 mx-auto'>
+    <div className="w-11/12 lg:w-10/12 mx-auto">
+      {/* Sales section  */}
+      <div className='relative'>
+        <div className="w-full lg:h-[200px] 2xl:h-[300px]"> {/* Set a height */}
+          <img src={saleImg} alt="" className='rounded-lg w-full h-full object-cover' />
+        </div>
+        <div className="absolute top-4 right-10">
+          <p className="font-bold uppercase text-white ">Summer Sale</p>
+          <p className="text-4xl text-white"><span className="text-[#ff8a00]">37%</span> OFF</p>
+          <p className="text-white">Free on all your order, Free Shipping and  30 days <br /> money-back guarantee</p>
+          <Buttons />
+        </div>
+      </div>
+
+      {/* Features section  */}
+      <div className="">
         <div className="flex justify-between my-5">
-          <p className="lg:text-3xl font-bold">Hot Deals</p>
+          <p className="lg:text-3xl font-bold">Featured Products</p>
           <p className="text-success flex items-center gap-2">View All <FaArrowRight /></p>
         </div>
-      
         <div className="grid grid-cols-2 lg:grid-cols-5">
           {HotDealData?.map((item, index) => (
             <div
@@ -58,7 +75,8 @@ const HotDeals = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
-export default HotDeals;
+export default SaleSection;
