@@ -5,6 +5,9 @@ import PopularCategory from './homeComponents/PopularCategory';
 import PopularProduct from './homeComponents/PopularProduct';
 import HotDeals from './homeComponents/HotDeals';
 import SaleSection from './homeComponents/SaleSection';
+import LatestNews from './homeComponents/LatestNews';
+import Testimonial from './homeComponents/Testimonial';
+import SocialSection from './homeComponents/SocialSection';
 
 const HomePage = () => {
   return (
@@ -15,7 +18,7 @@ const HomePage = () => {
         <PopularCategory />
       </div>
       <div className="mt-20">
-        <PopularProduct/>
+        <PopularProduct />
       </div>
 
       <div className="mt-20">
@@ -23,7 +26,16 @@ const HomePage = () => {
       </div>
 
       <div className="mt-20">
-        <SaleSection/>
+        <SaleSection />
+      </div>
+      <div className="mt-20">
+        <LatestNews />
+      </div>
+      <div className="mt-20">
+        <Testimonial />
+      </div>
+      <div className="">
+        <SocialSection/>
       </div>
     </div>
   );
