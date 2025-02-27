@@ -27,7 +27,9 @@ const SaleSection = () => {
       {/* Features section  */}
       <div className="">
         <div className="flex justify-between my-5">
-          <p className="lg:text-3xl font-bold">Featured Products</p>
+          <p className="lg:text-3xl font-bold">Featured Products</p>  
+
+          
           <p className="text-success flex items-center gap-2">View All <FaArrowRight /></p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-5">
